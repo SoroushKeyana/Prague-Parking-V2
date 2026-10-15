@@ -1,1 +1,6 @@
-<Solution />
+<Solution>
+  <Project Path="V2.0/PragueParking.V2.0.App/PragueParking.V2.0.App.csproj" />
+  <Project Path="V2.0/PragueParking.V2.0.Core/PragueParking.V2.0.Core.csproj" />
+  <Project Path="V2.0/PragueParking.V2.0.Data/PragueParking.V2.0.Data.csproj" />
+  <Project Path="V2.0/PragueParking.V2.0.Tests/PragueParking.V2.0.Tests.csproj" />
+</Solution>
