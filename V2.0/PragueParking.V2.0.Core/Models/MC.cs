@@ -4,7 +4,8 @@ using System.Text;
 
 namespace PragueParking.V2._0.Core.Models
 {
-    internal class MC
+    public class MC : Vehicle
     {
+        public override string TypeName => "MC";
     }
 }
