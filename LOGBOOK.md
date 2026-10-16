@@ -14,4 +14,5 @@
 * Created `Vehicle` class and implemented the properties, made it abstract becuase it will be inherited by other classes. For this specific version it will be inherited by `Car` and `Motorcycle` classes.
 * Created `Car` class and implemented the properties, inherited from `Vehicle` class.
 * Created `Motorcycle` class and implemented the properties, inherited from `Vehicle` class.
-* 
+* Created `VehicleTypeConfig` and `GarageConfig` classes with configurable garage capacity and vehicle types. 
+* Added `GetVehiclesPerSpot()` to retrieve the configured capacity for each vehicle type.
