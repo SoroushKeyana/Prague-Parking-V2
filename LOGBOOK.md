@@ -8,6 +8,7 @@
 
 * Created the Solution and the projects and the solution structure.
 * Made a plan on how to do the tastks, modulated the project.
-* Installed Spectre.Console
+* Installed `Spectre.Console`.
 * Verified project references and NuGet package dependencies for all projects in the solution.
-* Created necessary folders.
+* Created necessary folders and files for the project.
+* Created `Vehicle` class and implemented the properties, made it abstract becuase it will be inherited by other classes. For this specific version it will be inherited by `Car` and `Motorcycle` classes.
