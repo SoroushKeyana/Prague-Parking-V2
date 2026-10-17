@@ -27,3 +27,4 @@
 * Created `PriceList` with hourly rates per vehicle type, free parking minutes, and a placeholder for price calculation.
 * Created `ParkedVehicleRecord` to hold vehicle information and arival time.
 * Created `ParkedVehicleRecord` for JSON data persistence and implemented `ParkingGarage` with vehicle parking, retrieval, duplicate registration checks, vehicle movement, record conversion and loading, and garage occupancy counting.
+* Created `config.json` file with default configuration for vehicle types and garage capacity.

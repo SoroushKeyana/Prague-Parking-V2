@@ -1,0 +1,13 @@
+{
+  "NumberOfSpots": 100,
+  "VehicleTypes": [
+    {
+      "Name": "Car",
+      "VehiclesPerSpot": 1
+    },
+    {
+      "Name": "MC",
+      "VehiclesPerSpot": 2
+    }
+  ]
+}
