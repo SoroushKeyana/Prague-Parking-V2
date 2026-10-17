@@ -17,4 +17,9 @@
     <ProjectReference Include="..\PragueParking.V2.0.Data\PragueParking.V2.0.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Files\" />
+    <Folder Include="UI\" />
+  </ItemGroup>
+
 </Project>
