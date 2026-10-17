@@ -31,3 +31,7 @@
 * Created `prices.txt` file with default pricing for vehicle types.
 * Created `data.json` file, left it empty for now.
 * Created file paths for the configuration, price list, and parking data files using AppContext.BaseDirectory and Path.Combine to ensure the application can locate files independently of the project location.
+
+## 2026-10-18
+
+* Implemented MyFiles to read and validate garage configuration and parking prices, load saved vehicle records, and save parking data using a temporary file before replacing the existing file. Tested reading all three files from the App project.

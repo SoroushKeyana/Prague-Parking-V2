@@ -11,12 +11,17 @@ namespace PragueParking.V2._0.Core.Config
 
         public int GetVehiclePerSpot(string typeName)
         {
+            return GetVehiclesPerSpot(typeName);
+        }
+
+        public int GetVehiclesPerSpot(string typeName)
+        {
             var vehicleTypeConfig = VehicleTypes.Find(v => v.Name.Equals(typeName, StringComparison.OrdinalIgnoreCase));
             if (vehicleTypeConfig == null)
             {
                 throw new ArgumentException($"Vehicle type '{typeName}' is not configured.");
             }
-            return vehicleTypeConfig.VehiclePerSpot;
+            return vehicleTypeConfig.VehiclesPerSpot;
         }
     }
 }
