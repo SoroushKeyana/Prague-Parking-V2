@@ -1,0 +1,10 @@
+﻿# ===== PRAGUE PARKING PRICE LIST =====
+# Prices are in CZK per STARTED hour.
+# Everything after a # sign is a comment and is ignored.
+# Format:  VehicleType = Price
+
+Car = 20     # cars
+MC  = 10     # motorcycles
+
+# Parking shorter than this many minutes is free:
+FreeMinutes = 10
