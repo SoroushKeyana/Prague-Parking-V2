@@ -34,6 +34,6 @@
 
 ## 2026-10-18
 
-* Implemented MyFiles to read and validate garage configuration and parking prices, load saved vehicle records, and save parking data using a temporary file before replacing the existing file. Tested reading all three files from the App project.
-* Added 16 test parking records with cars and motorcycles in different spots and arrival times covering the planned pricing scenarios. Tested LoadFromRecords() to verify that vehicles are restored to the correct spots.
-* 
+* Implemented `MyFiles` to read and validate garage configuration and parking prices, load saved vehicle records, and save parking data using a temporary file before replacing the existing file. Tested reading all three files from the App project.
+* Added 16 test parking records with cars and motorcycles in different spots and arrival times covering the planned pricing scenarios. Tested `LoadFromRecords()` to verify that vehicles are restored to the correct spots.
+* Implemented `CalculatePrice()` in `PriceList` using configurable hourly rates and free parking minutes. Parking under the freetime limit costs nothing, while billable time is rounded up to started hours. Used the supplied departure time to keep the calculation testable.

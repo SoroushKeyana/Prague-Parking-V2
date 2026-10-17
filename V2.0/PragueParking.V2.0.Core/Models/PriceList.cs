@@ -10,9 +10,26 @@ namespace PragueParking.V2._0.Core.Models
 
         public int FreeMinutes { get; set; }
 
+
         public decimal CalculatePrice(Vehicle v, DateTime departure)
         {
-            throw new NotImplementedException();
+            if (!PricePerHour.TryGetValue(v.TypeName, out var rate))
+            {
+                throw new InvalidOperationException(
+                    $"No price defined for {v.TypeName}.");
+            }
+
+            var parked = departure - v.ArrivalTime;
+
+            if (parked.TotalMinutes < FreeMinutes)
+            {
+                return 0;
+            }
+
+            var startedHours = (decimal)Math.Ceiling(parked.TotalHours);
+
+            return startedHours * rate;
         }
+
     }
 }
