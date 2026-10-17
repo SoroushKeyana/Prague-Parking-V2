@@ -35,3 +35,5 @@
 ## 2026-10-18
 
 * Implemented MyFiles to read and validate garage configuration and parking prices, load saved vehicle records, and save parking data using a temporary file before replacing the existing file. Tested reading all three files from the App project.
+* Added 16 test parking records with cars and motorcycles in different spots and arrival times covering the planned pricing scenarios. Tested LoadFromRecords() to verify that vehicles are restored to the correct spots.
+* 

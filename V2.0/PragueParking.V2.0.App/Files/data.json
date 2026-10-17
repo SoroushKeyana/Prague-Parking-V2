@@ -1,1 +1,98 @@
-[]
+[
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR101",
+    "ArrivalTime": "2026-10-17T23:55:00",
+    "SpotNumber": 1
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR102",
+    "ArrivalTime": "2026-10-17T23:51:00",
+    "SpotNumber": 2
+  },
+  {
+    "Type": "MC",
+    "RegistrationNumber": "MC201",
+    "ArrivalTime": "2026-10-17T23:49:00",
+    "SpotNumber": 3
+  },
+  {
+    "Type": "MC",
+    "RegistrationNumber": "MC202",
+    "ArrivalTime": "2026-10-17T20:40:00",
+    "SpotNumber": 3
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR103",
+    "ArrivalTime": "2026-10-17T22:55:00",
+    "SpotNumber": 4
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR104",
+    "ArrivalTime": "2026-10-17T08:30:00",
+    "SpotNumber": 5
+  },
+  {
+    "Type": "MC",
+    "RegistrationNumber": "MC203",
+    "ArrivalTime": "2026-10-17T18:00:00",
+    "SpotNumber": 6
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR105",
+    "ArrivalTime": "2026-10-16T14:30:00",
+    "SpotNumber": 7
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR106",
+    "ArrivalTime": "2026-10-17T19:15:00",
+    "SpotNumber": 8
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR107",
+    "ArrivalTime": "2026-10-16T09:00:00",
+    "SpotNumber": 10
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR108",
+    "ArrivalTime": "2026-10-17T16:45:00",
+    "SpotNumber": 12
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR109",
+    "ArrivalTime": "2026-10-17T12:20:00",
+    "SpotNumber": 13
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR110",
+    "ArrivalTime": "2026-10-16T20:10:00",
+    "SpotNumber": 15
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR111",
+    "ArrivalTime": "2026-10-17T10:00:00",
+    "SpotNumber": 16
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR112",
+    "ArrivalTime": "2026-10-16T18:45:00",
+    "SpotNumber": 18
+  },
+  {
+    "Type": "Car",
+    "RegistrationNumber": "CAR113",
+    "ArrivalTime": "2026-10-17T21:30:00",
+    "SpotNumber": 20
+  }
+]
