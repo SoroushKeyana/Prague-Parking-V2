@@ -30,3 +30,4 @@
 * Created `config.json` file with default configuration for vehicle types and garage capacity.
 * Created `prices.txt` file with default pricing for vehicle types.
 * Created `data.json` file, left it empty for now.
+* Created file paths for the configuration, price list, and parking data files using AppContext.BaseDirectory and Path.Combine to ensure the application can locate files independently of the project location.
