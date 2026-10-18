@@ -1,45 +1,33 @@
-﻿
-using PragueParking.V2._0.Core.Config;
+﻿using PragueParking.V2._0.Core.Config;
 using PragueParking.V2._0.Core.Models;
+using PragueParking.V2_0.App.UI;
 using PragueParking.V2_0.Core.Models;
 using PragueParking.V2_0.Data;
 using Spectre.Console;
 using System.Globalization;
 
-namespace PragueParking.V2_0.App.UI;
+namespace PragueParking_V2_0.App.UI;
 
 public class ParkingApp
 {
     private readonly GarageConfig _config;
     private PriceList _priceList;
     private readonly ParkingGarage _garage;
-
-    private readonly string _configPath;
     private readonly string _pricesPath;
     private readonly string _dataPath;
 
-    public ParkingApp()
+    public ParkingApp(
+        GarageConfig config,
+        PriceList priceList,
+        ParkingGarage garage,
+        string pricesPath,
+        string dataPath)
     {
-        string filesPath = Path.Combine(
-            AppContext.BaseDirectory, "Files");
-
-        _configPath = Path.Combine(filesPath, "config.json");
-        _pricesPath = Path.Combine(filesPath, "prices.txt");
-        _dataPath = Path.Combine(filesPath, "data.json");
-
-        _config = MyFiles.ReadConfig(_configPath);
-        _priceList = MyFiles.ReadPriceList(_pricesPath);
-
-        _garage = new ParkingGarage(_config);
-
-        var records = MyFiles.ReadParkedVehicles(_dataPath);
-        _garage.LoadFromRecords(records, out var warnings);
-
-        foreach (string warning in warnings)
-        {
-            AnsiConsole.MarkupLine(
-                $"[yellow]Warning:[/] {Markup.Escape(warning)}");
-        }
+        _config = config;
+        _priceList = priceList;
+        _garage = garage;
+        _pricesPath = pricesPath;
+        _dataPath = dataPath;
     }
 
     public void Run()
@@ -222,10 +210,16 @@ public class ParkingApp
         table.AddRow("Spot", spot.SpotNumber.ToString());
         table.AddRow("Type", vehicle.TypeName);
         table.AddRow("Registration", vehicle.RegistrationNumber);
-        table.AddRow("Arrival", vehicle.ArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"));
-        table.AddRow("Departure", departure.ToString("yyyy-MM-dd HH:mm:ss"));
+        table.AddRow(
+            "Arrival",
+            vehicle.ArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"));
+        table.AddRow(
+            "Departure",
+            departure.ToString("yyyy-MM-dd HH:mm:ss"));
         table.AddRow("Duration", FormatDuration(duration));
-        table.AddRow("Price", $"{price.ToString("0.00", CultureInfo.InvariantCulture)} CZK");
+        table.AddRow(
+            "Price",
+            $"{price.ToString("0.00", CultureInfo.InvariantCulture)} CZK");
 
         AnsiConsole.Write(new Panel(table).Header("Checkout details"));
 
@@ -302,7 +296,9 @@ public class ParkingApp
         table.AddRow("Spot", spot.SpotNumber.ToString());
         table.AddRow("Type", vehicle.TypeName);
         table.AddRow("Registration", vehicle.RegistrationNumber);
-        table.AddRow("Arrival", vehicle.ArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"));
+        table.AddRow(
+            "Arrival",
+            vehicle.ArrivalTime.ToString("yyyy-MM-dd HH:mm:ss"));
         table.AddRow("Parked duration", FormatDuration(duration));
 
         AnsiConsole.Write(table);
@@ -315,7 +311,7 @@ public class ParkingApp
 
     private void ReloadPriceList()
     {
-        // Assign only after successful parsing, so errors preserve old prices.
+        // Keep the current prices if the new file cannot be read.
         var updatedPrices = MyFiles.ReadPriceList(_pricesPath);
         _priceList = updatedPrices;
 

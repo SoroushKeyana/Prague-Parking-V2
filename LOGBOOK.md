@@ -44,3 +44,12 @@
 * Created a garage map with color coded occupancy status and a summary of free, partially filled, and full spots.
 * Implemented price list reloading with error handling, preserving the previous prices if loading fails.
 * Added automatic saving of parking data after successful parking, checkout, and vehicle movement operations.
+* Moved application initialization to Program.cs.
+* Set up paths for configuration, prices, and parking data files.
+* Loaded the garage configuration and price list.
+* Created the parking garage and restored saved vehicles.
+* Displayed warnings for parking records that could not be restored.
+* Updated `ParkingApp` to receive dependencies through its constructor.
+* Added startup error handling using `Spectre.Console`.
+* Removed unnecessary using statements to resolve compilation errors.
+* Verified that the application builds and runs successfully.
