@@ -1,6 +1,7 @@
-﻿using System;
-using System.IO;
+﻿using PragueParking.V2_0.App.UI;
 using Spectre.Console;
+using System;
+using System.IO;
 
 
 string configPath = Path.Combine(
@@ -13,5 +14,12 @@ string dataPath = Path.Combine(
     AppContext.BaseDirectory, "Files", "data.json");
 
 
-Console.WriteLine("Hello, World! ");
-AnsiConsole.MarkupLine("[red] Hello[/], [yellow bold slowblink]World[/]!");
+try
+{
+    new ParkingApp().Run();
+}
+catch (Exception ex)
+{
+    AnsiConsole.MarkupLine(
+        $"[red]Application error:[/] {Markup.Escape(ex.Message)}");
+}

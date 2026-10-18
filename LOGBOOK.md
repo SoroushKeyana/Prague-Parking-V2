@@ -37,4 +37,10 @@
 * Implemented `MyFiles` to read and validate garage configuration and parking prices, load saved vehicle records, and save parking data using a temporary file before replacing the existing file. Tested reading all three files from the App project.
 * Added 16 test parking records with cars and motorcycles in different spots and arrival times covering the planned pricing scenarios. Tested `LoadFromRecords()` to verify that vehicles are restored to the correct spots.
 * Implemented `CalculatePrice()` in `PriceList` using configurable hourly rates and free parking minutes. Parking under the freetime limit costs nothing, while billable time is rounded up to started hours. Used the supplied departure time to keep the calculation testable.
-* 
+* Implemented the `Spectre.Console` user interface with a header and interactive main menu.
+* Added vehicle parking with configurable vehicle types, registration number validation, and duplicate checks.
+* Implemented vehicle checkout with parking duration calculation, price display, and checkout confirmation.
+* Added vehicle search and movement between parking spots, including validation and error handling.
+* Created a garage map with color coded occupancy status and a summary of free, partially filled, and full spots.
+* Implemented price list reloading with error handling, preserving the previous prices if loading fails.
+* Added automatic saving of parking data after successful parking, checkout, and vehicle movement operations.
