@@ -53,3 +53,12 @@
 * Added startup error handling using `Spectre.Console`.
 * Removed unnecessary using statements to resolve compilation errors.
 * Verified that the application builds and runs successfully.
+
+## 2026-10-19
+
+* Created PriceTests.cs using MSTest and Arrange / Act / Assert. 
+* Tested free parking under 10 minutes and charging at exactly 10 minutes.
+* Tested car parking for 90 minutes and motorcycle parking for 61 minutes.
+* Created `GarageTests.cs` to test parking capacity and duplicate registrations.
+* Tested vehicle retrieval and moving a vehicle to a full spot.
+* Ran all eight tests in Test Explorer and all passed.
