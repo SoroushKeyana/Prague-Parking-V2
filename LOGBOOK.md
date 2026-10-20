@@ -62,3 +62,11 @@
 * Created `GarageTests.cs` to test parking capacity and duplicate registrations.
 * Tested vehicle retrieval and moving a vehicle to a full spot.
 * Ran all eight tests in Test Explorer and all passed.
+* Created a checklist for the final application testing.
+* Tested everything manually in the application, including parking, checkout, moving vehicles, and reloading prices. Everything worked as expected, and the application was stable.
+* Cloned the repository to a new folder and verified that the application runs successfully with the default configuration and pricing files.
+
+## 2026-10-20
+
+
+* 
