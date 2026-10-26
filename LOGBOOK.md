@@ -7,16 +7,16 @@
 ## 2026-10-15
 
 * Created the Solution and the projects and the solution structure.
-* Made a plan on how to do the tastks, modulated the project.
+* Planned the project and divided it into App, Core, Data and Tests.
 * Installed `Spectre.Console`.
 * Verified project references and NuGet package dependencies for all projects in the solution.
 * Created necessary folders and files for the project.
 
 ## 2026-10-16
 
-* Created `Vehicle` class and implemented the properties, made it abstract becuase it will be inherited by other classes. For this specific version it will be inherited by `Car` and `Motorcycle` classes.
+* Created `Vehicle` class and implemented the properties, made it abstract becuase it will be inherited by other classes. For this specific version it will be inherited by `Car` and `MC` classes.
 * Created `Car` class and implemented the properties, inherited from `Vehicle` class.
-* Created `Motorcycle` class and implemented the properties, inherited from `Vehicle` class.
+* Created `MC` class and implemented the properties, inherited from `Vehicle` class.
 * Created `VehicleTypeConfig` and `GarageConfig` classes with configurable garage capacity and vehicle types. 
 * Added `GetVehiclesPerSpot()` to retrieve the configured capacity for each vehicle type.
 * A spot holds only one vehicle type at a time, and up to `VehiclesPerSpot` vehicles of that type. So 1 car, or up to 2 MCs, never a mix.
@@ -25,8 +25,7 @@
 
 * Created `ParkingSpot` with vehicle capacity validation, `Park` and `remove` methods, and `Empty` status checks. 
 * Created `PriceList` with hourly rates per vehicle type, free parking minutes, and a placeholder for price calculation.
-* Created `ParkedVehicleRecord` to hold vehicle information and arival time.
-* Created `ParkedVehicleRecord` for JSON data persistence and implemented `ParkingGarage` with vehicle parking, retrieval, duplicate registration checks, vehicle movement, record conversion and loading, and garage occupancy counting.
+* Created `ParkedVehicleRecord` to save the vehicle type, registration number, arrival time and spot number in JSON.
 * Created `config.json` file with default configuration for vehicle types and garage capacity.
 * Created `prices.txt` file with default pricing for vehicle types.
 * Created `data.json` file, left it empty for now.
@@ -63,7 +62,8 @@
 * Tested vehicle retrieval and moving a vehicle to a full spot.
 * Ran all eight tests in Test Explorer and all passed.
 * Created a checklist for the final application testing.
-* Tested everything manually in the application, including parking, checkout, moving vehicles, and reloading prices. Everything worked as expected, and the application was stable.
+* Manually checked parking, checkout, moving vehicles and reloading prices. I also restarted the application to check that parked vehicles were saved and loaded again.
+* At first I thought saving was not working because the project's `data.json` did not change. I found that the application updates the copy in `bin/Debug/net10.0/Files/`. The original file is used as initial test data.
 * Cloned the repository to a new folder and verified that the application runs successfully with the default configuration and pricing files.
 
 ## 2026-10-26
