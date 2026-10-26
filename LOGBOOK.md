@@ -66,7 +66,6 @@
 * Tested everything manually in the application, including parking, checkout, moving vehicles, and reloading prices. Everything worked as expected, and the application was stable.
 * Cloned the repository to a new folder and verified that the application runs successfully with the default configuration and pricing files.
 
-## 2026-10-20
+## 2026-10-26
 
-
-* 
+* Updated the README.md file with instructions for running the application, requirements, and file descriptions. 
